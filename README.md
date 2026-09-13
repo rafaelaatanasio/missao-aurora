@@ -122,7 +122,7 @@ Com os dados simulados utilizados na execução final, todos os grupos de teleme
 ## 👥 Integrantes — Grupo 37
 
 - **Enzo Yugi Kloiwa** — RM 574398
-- **Guilherme de Souza Santos** — RM a preencher
+- **Guilherme de Souza Santos** — 574908
 - **Luke Malaquias Lage** — RM 574356
 - **Rafaela Aparecida dos Santos Atanásio** — RM 574868
 - **Yasmin Sampaio Barbieri** — RM 576282

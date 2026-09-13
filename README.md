@@ -111,11 +111,11 @@ Com os dados simulados utilizados na execução final, todos os grupos de teleme
 
 ### Verificação da telemetria
 
-INSERIR PRINT AQUI
+![Verificação da telemetria](execucao_telemetria.png)
 
 ### Análise energética
 
-INSERIR PRINT AQUI
+![Análise energética](execucao_energia.png)
 
 ---
 

@@ -136,6 +136,14 @@ No Linux ou macOS, use `python3 MGPEB.py`.
 
 O programa roda uma demonstração completa: buscas, ordenação, primeira rodada de autorizações, correções simuladas, rodada final e a função de altura. A saída completa está em [`execucao_MGPEB.txt`](execucao_MGPEB.txt).
 
+### Testes de validação
+
+```bash
+py validar_MGPEB.py
+```
+
+São 35 testes automatizados (biblioteca padrão `unittest`) que verificam as quatro decisões, os limites de combustível e de sensores, a meta-regra M01 (incluindo o exemplo da logística em tempestade), as dependências, a atualização do ambiente, a busca, a ordenação, as estruturas lineares e o domínio da função h(t).
+
 ---
 
 ## 📊 Resultado da simulação
@@ -166,6 +174,7 @@ O programa roda uma demonstração completa: buscas, ordenação, primeira rodad
 |---|---|
 | `MGPEB.py` | Protótipo final, com as 14 regras e a meta-regra |
 | `pouso_marte.py` | Primeira versão do protótipo, com apenas as regras de combustível e massa |
+| `validar_MGPEB.py` | Testes automatizados de validação do protótipo |
 | `execucao_MGPEB.txt` | Saída completa da execução do `MGPEB.py` |
 | `docs/Relatorio_MGPEB.pdf` | Relatório técnico entregue (portas lógicas, função, evolução da computação, ESG e anexo de estruturas) |
 | `docs/Regras_de_Decisao_Pouso_Marte.docx` | Documento de especificação das regras de decisão |

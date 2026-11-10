@@ -67,4 +67,4 @@ Cada pasta tem seu próprio README, com a explicação do módulo, as instruçõ
 
 Este projeto possui finalidade exclusivamente acadêmica e foi desenvolvido como parte do curso de Ciência da Computação da FIAP.
 
-O estado do repositório entregue na Fase 1 está preservado na tag [`entrega-fase-1`](https://github.com/rafaelaatanasio/missao-aurora/tree/entrega-fase-1).
+O estado do repositório entregue na Fase 1 está preservado na branch [`entrega-fase-1`](https://github.com/rafaelaatanasio/missao-aurora/tree/entrega-fase-1).

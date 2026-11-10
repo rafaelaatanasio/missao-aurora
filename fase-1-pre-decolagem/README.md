@@ -131,7 +131,7 @@ Com os dados simulados utilizados na execução final, todos os grupos de teleme
 | `docs/Relatorio_Operacional.pdf` | Relatório entregue, com o fluxograma do algoritmo |
 | `img/` | Prints da execução |
 
-> O nome correto da missão é **Aurora Siger**. Versões anteriores dos arquivos usavam "Aurora Singer". O estado entregue originalmente está preservado na tag [`entrega-fase-1`](https://github.com/rafaelaatanasio/missao-aurora/tree/entrega-fase-1).
+> O nome correto da missão é **Aurora Siger**. Versões anteriores dos arquivos usavam "Aurora Singer". O estado entregue originalmente está preservado na branch [`entrega-fase-1`](https://github.com/rafaelaatanasio/missao-aurora/tree/entrega-fase-1).
 
 ---
 

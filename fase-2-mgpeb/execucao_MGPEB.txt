@@ -1,0 +1,59 @@
+AURORA SIGER - MGPEB
+Busca: menor combustível: Logística/Suprimentos
+Busca por energia: ['Energia (Reator)']
+Maior prioridade: Trem de Pouso
+  • Registrado: Trem de Pouso
+  • Registrado: Energia (Reator)
+  • Registrado: Habitação
+  • Registrado: Suporte Médico
+  • Registrado: Logística/Suprimentos
+  • Registrado: Laboratório Científico
+  • Registrado: Rover de Exploração
+
+Primeira rodada
+  • AUTORIZAR: Trem de Pouso
+  • AUTORIZAR: Energia (Reator)
+  • AUTORIZAR: Habitação
+  • AUTORIZAR: Suporte Médico
+  • BLOQUEAR: Logística/Suprimentos | R01: combustível insuficiente
+  • AUTORIZAR: Laboratório Científico
+  • BLOQUEAR: Rover de Exploração | R02: massa acima da zona
+
+[AGUARDANDO AUTORIZAÇÃO] (0)
+
+[EM ESPERA] (0)
+
+[EM ALERTA] (2)
+   Logística/Suprimentos  P=MEDIA  CRIT=ALTA  COMB= 11.0% MASSA=  22000kg ETA=12/10 11:18   <- R01: combustível insuficiente
+   Rover de Exploração    P=BAIXA  CRIT=BAIXA COMB= 70.0% MASSA=  45000kg ETA=12/10 12:00   <- R02: massa acima da zona
+
+[POUSADOS] (5)
+   Trem de Pouso          P=MAXIMA CRIT=VITAL COMB= 92.0% MASSA=   6500kg ETA=12/10 10:00 
+   Energia (Reator)       P=MAXIMA CRIT=VITAL COMB= 78.0% MASSA=  12000kg ETA=12/10 10:12 
+   Habitação              P=ALTA   CRIT=VITAL COMB= 64.0% MASSA=  18000kg ETA=12/10 10:30 
+   Suporte Médico         P=ALTA   CRIT=ALTA  COMB= 55.0% MASSA=   4200kg ETA=12/10 10:36 
+   Laboratório Científico P=MEDIA  CRIT=MEDIA COMB= 47.0% MASSA=   9800kg ETA=12/10 11:00 
+
+Correções simuladas: combustível da Logística e zona do Rover
+  • Logística/Suprimentos corrigido (combustível 40%), reenfileirado
+  • AUTORIZAR: Logística/Suprimentos
+  • AUTORIZAR: Rover de Exploração
+
+[AGUARDANDO AUTORIZAÇÃO] (0)
+
+[EM ESPERA] (0)
+
+[EM ALERTA] (0)
+
+[POUSADOS] (7)
+   Trem de Pouso          P=MAXIMA CRIT=VITAL COMB= 92.0% MASSA=   6500kg ETA=12/10 10:00 
+   Energia (Reator)       P=MAXIMA CRIT=VITAL COMB= 78.0% MASSA=  12000kg ETA=12/10 10:12 
+   Habitação              P=ALTA   CRIT=VITAL COMB= 64.0% MASSA=  18000kg ETA=12/10 10:30 
+   Suporte Médico         P=ALTA   CRIT=ALTA  COMB= 55.0% MASSA=   4200kg ETA=12/10 10:36 
+   Laboratório Científico P=MEDIA  CRIT=MEDIA COMB= 47.0% MASSA=   9800kg ETA=12/10 11:00 
+   Logística/Suprimentos  P=MEDIA  CRIT=ALTA  COMB= 40.0% MASSA=  22000kg ETA=12/10 11:18 
+   Rover de Exploração    P=BAIXA  CRIT=BAIXA COMB= 70.0% MASSA=  45000kg ETA=12/10 12:00 
+
+Último evento (LIFO): AUTORIZAR: Rover de Exploração
+
+Altura simulada: [(0, 1000), (10, 800), (25, 500), (40, 200), (50, 0)]

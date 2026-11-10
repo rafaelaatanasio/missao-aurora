@@ -1,4 +1,4 @@
-print("=== AURORA SINGER - CHECKLIST DE DECOLAGEM ===")
+print("=== AURORA SIGER - CHECKLIST DE DECOLAGEM ===")
 
 # Integridade estrutural (5 componentes)
 print("\n-- Integridade estrutural --")
@@ -60,7 +60,7 @@ ok_temp_lh2 = (20 <= t_lh2 <= 33)
 ok_temperaturas = (ok_temp_camara and ok_temp_lox and ok_temp_lh2)
 
 print("\n============================================================")
-print("RELATORIO DE VERIFICACAO - AURORA SINGER")
+print("RELATORIO DE VERIFICACAO - AURORA SIGER")
 print("============================================================")
 
 if ok_estrutural:
@@ -117,7 +117,7 @@ energia_util = energia_disponivel - energia_perdida
 energia_restante = energia_util - consumo_decolagem
 
 print("\n============================================================")
-print("ANALISE ENERGETICA - AURORA SINGER")
+print("ANALISE ENERGETICA - AURORA SIGER")
 print("============================================================")
 print("Capacidade total do sistema:", capacidade_total, "kWh")
 print("Carga atual da bateria:", bateria, "%")
@@ -151,7 +151,7 @@ Estou desenvolvendo um relatorio academico para a disciplina de
 Ciencia da Computacao da FIAP.
 
 Voce deve atuar apenas como ferramenta de apoio a interpretacao
-dos dados simulados da Missao Aurora Singer, sem criar novas faixas,
+dos dados simulados da Missao Aurora Siger, sem criar novas faixas,
 limites ou especificacoes tecnicas.
 
 Os valores e limites utilizados sao premissas academicas definidas
@@ -180,7 +180,7 @@ Com base somente nesses dados:
    implementadas pelo algoritmo desenvolvido pelo grupo.
 """
 
-print("\\n============================================================")
+print("\n============================================================")
 print("PROMPT PARA ANALISE ASSISTIDA POR IA")
 print("============================================================")
 print(prompt_ia)

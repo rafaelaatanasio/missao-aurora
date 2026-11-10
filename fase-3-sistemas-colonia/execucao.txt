@@ -1,0 +1,91 @@
+============================================================
+  AURORA SIGER III - Sistema integrado da colônia
+============================================================
+
+[1] ORGANIZAÇÃO DOS DADOS - HIERARQUIA DA COLÔNIA
+  - Colônia Aurora Siger [colonia]
+      - Sistema energético [energia]
+          - Geração renovável [geracao]
+              - Painéis solares [solar]
+              - Turbinas eólicas [eolica]
+          - Armazenamento [armazenamento]
+              - Banco de baterias [baterias]
+      - Suporte à vida [suporte_vida]
+          - Geração de oxigênio [oxigenio]
+          - Reciclagem de água [agua]
+          - Controle de temperatura [temperatura]
+      - Comunicação [comunicacao]
+      - Iluminação [iluminacao]
+      - Laboratórios [laboratorios]
+      - Lazer e conforto [lazer]
+
+  Navegação entre subsistemas:
+    energia          -> ['geracao', 'armazenamento']
+    energia/geracao  -> ['solar', 'eolica']
+    suporte_vida     -> ['oxigenio', 'agua', 'temperatura']
+    energia/armazenamento/baterias -> 120 de 200 kWh
+    Capacidade total de geração (soma do ramo) = 120 kWh
+
+[2] REGRAS DE DECISÃO
+  energia = 40, consumo = 70  ->  ALERTA: ativar modo economia
+  energia = 40, consumo = 30  ->  ALERTA: reduzir consumo
+  energia = 70, consumo = 80  ->  ATENÇÃO: consumo alto, monitorar
+  energia = 80, consumo = 30  ->  OK: operação normal
+  energia = 15, consumo = 50  ->  CRÍTICO: manter apenas suporte à vida, desligar sistemas não essenciais
+
+  Sistemas mantidos por nível de energia (lidos da hierarquia):
+    energia = 15%: Suporte à vida
+    energia = 40%: Suporte à vida, Comunicação, Iluminação
+    energia = 60%: Suporte à vida, Comunicação, Iluminação, Laboratórios
+    energia = 90%: Suporte à vida, Comunicação, Iluminação, Laboratórios, Lazer e conforto
+
+[3] REGRESSÃO LINEAR - PREVISÃO DE COMPORTAMENTOS
+
+  Energia eólica gerada a partir do vento
+    vento (km/h): [8, 10, 12]
+    energia eólica (kWh): [20, 25, 30]
+    Reta: y = 2.50 * x + 0.00   (R² = 1.000)
+    vento (km/h) = 11  ->  energia eólica (kWh) ≈ 27.5
+    vento (km/h) = 14  ->  energia eólica (kWh) ≈ 35.0
+
+  Energia solar gerada a partir das horas de sol
+    horas de sol: [4, 6, 8, 10]
+    energia solar (kWh): [18, 31, 41, 52]
+    Reta: y = 5.60 * x - 3.70   (R² = 0.997)
+    horas de sol = 7  ->  energia solar (kWh) ≈ 35.5
+    horas de sol = 12  ->  energia solar (kWh) ≈ 63.5
+
+  Consumo de energia a partir da população
+    população (pessoas): [20, 30, 40, 50]
+    consumo (kWh): [32, 44, 59, 70]
+    Reta: y = 1.29 * x + 6.10   (R² = 0.997)
+    população (pessoas) = 35  ->  consumo (kWh) ≈ 51.2
+    população (pessoas) = 60  ->  consumo (kWh) ≈ 83.5
+
+[4] ANÁLISE DE USO DE ENERGIA
+  geração = 40, consumo = 70
+    -> ALERTA: consumo maior que geração
+  geração = 80, consumo = 30
+    -> SUGESTÃO: armazenar energia excedente
+  geração = 45, consumo = 60, reserva = 50
+    -> ALERTA: consumo maior que geração (reserva cobre o déficit por enquanto)
+  geração = 45, consumo = 60, reserva = 5
+    -> ALERTA CRÍTICO: consumo maior que geração e reserva insuficiente
+  geração = 50, consumo = 50
+    -> OK: geração e consumo equilibrados
+
+[5] INTEGRAÇÃO: previsão -> análise -> decisão
+
+  Cenário: Dia normal
+    Entrada: vento = 11 km/h, horas de sol = 7, população = 35, bateria = 120 kWh
+    Previsão: solar ≈ 35.5, eólica ≈ 27.5, geração ≈ 63.0, consumo ≈ 51.2 kWh
+    Análise: SUGESTÃO: armazenar energia excedente
+    Energia ≈ 60%, consumo ≈ 43%  ->  Decisão: OK: operação normal
+    Sistemas mantidos: Suporte à vida, Comunicação, Iluminação, Laboratórios
+
+  Cenário: Tempestade de poeira (pouco sol, mais gente na base)
+    Entrada: vento = 6 km/h, horas de sol = 2, população = 55, bateria = 80 kWh
+    Previsão: solar ≈ 7.5, eólica ≈ 15.0, geração ≈ 22.5, consumo ≈ 77.1 kWh
+    Análise: ALERTA: consumo maior que geração (reserva cobre o déficit por enquanto)
+    Energia ≈ 40%, consumo ≈ 64%  ->  Decisão: ALERTA: ativar modo economia
+    Sistemas mantidos: Suporte à vida, Comunicação, Iluminação

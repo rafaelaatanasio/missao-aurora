@@ -14,7 +14,7 @@ A cada fase do curso, a nave Aurora Siger avança uma etapa da missão a Marte, 
 |---|---|---|---|
 | [**Fase 1**](fase-1-pre-decolagem/) | Pré-decolagem na Terra | Relatório Operacional de Pré-Decolagem (GO / NOT-GO) | Lógica booleana, algoritmos, Python, análise energética, IA como apoio, ética e sustentabilidade |
 | [**Fase 2**](fase-2-mgpeb/) | Pouso em Marte | MGPEB — Gerenciamento de Pouso e Estabilização de Base | Portas lógicas, listas, filas e pilhas, busca e ordenação, funções matemáticas, evolução da computação, ESG |
-| **Fase 3** | Em desenvolvimento | — | — |
+| [**Fase 3**](fase-3-sistemas-colonia/) | Primeiros sistemas da colônia | Sistema integrado: dados, decisões e previsão | Hierarquia e chave-valor, regras de decisão, regressão linear, energia solar e eólica |
 
 ### Fase 1 · Pré-decolagem
 
@@ -28,6 +28,12 @@ Organiza o pouso de sete módulos da colônia em Marte usando estruturas de dado
 
 ➡️ [Ver a Fase 2](fase-2-mgpeb/)
 
+### Fase 3 · Sistemas da colônia
+
+Organiza a colônia como uma hierarquia de sistemas (energia → solar / eólica / baterias, suporte à vida, comunicação...), prevê geração e consumo com regressão linear, compara geração, consumo e reserva, e decide automaticamente a ação e quais sistemas ficam ligados. Exemplo: energia = 40% e consumo = 70% → **ALERTA: ativar modo economia**.
+
+➡️ [Ver a Fase 3](fase-3-sistemas-colonia/)
+
 ---
 
 ## 📁 Estrutura do repositório
@@ -36,7 +42,8 @@ Organiza o pouso de sete módulos da colônia em Marte usando estruturas de dado
 missao-aurora/
 ├── README.md                  ← esta página
 ├── fase-1-pre-decolagem/      ← notebook, script, relatório e prints da Fase 1
-└── fase-2-mgpeb/              ← protótipo MGPEB, relatório, regras e prints da Fase 2
+├── fase-2-mgpeb/              ← protótipo MGPEB, relatório, regras e prints da Fase 2
+└── fase-3-sistemas-colonia/   ← sistema integrado da colônia, testes e prints da Fase 3
 ```
 
 Cada pasta tem seu próprio README, com a explicação do módulo, as instruções de execução e as evidências.
